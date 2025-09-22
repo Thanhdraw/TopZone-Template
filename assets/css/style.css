@@ -3,6 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* Khai báo biến toàn cục */
+:root {
+  --text-color: #ffffff;
+  --primary-color: #ff9800;
+  --secondary-color: #555;
+  --bg-color: #f9f9f9;
+}
 body {
   font-family: Arial, sans-serif;
   font-size: 16px;
