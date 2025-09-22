@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Topzone - Ecommerce</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Header css -->
+    <link rel="stylesheet" href="assets/css/header.css" />
+  </head>
+  <body>
+    <!-- Header sẽ được load vào đây -->
+    <div id="site-header-main"></div>
+
+    <!-- Nội dung chính -->
+    <main>
+      <div class="container">
+        <h1>Chào mừng đến MyShop</h1>
+        <p>Đây là nội dung trang chủ...</p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="site-footer-main"></div>
+
+    <!-- JS đặt cuối để load nhanh hơn -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      $(function () {
+        $('#site-header-main').load('partials/header.html');
+        $('#site-footer-main').load('partials/footer.html');
+      });
+    </script>
+  </body>
+</html>

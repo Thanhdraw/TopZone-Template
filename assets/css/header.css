@@ -1,0 +1,27 @@
+.site-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.site-header .main-nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.site-header .main-nav ul li {
+  margin: 10px;
+}
+
+.header-wrap .header-right {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
