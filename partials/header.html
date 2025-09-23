@@ -9,9 +9,15 @@
     <nav class="main-nav">
       <ul>
         <li><a href="index.html">Trang chủ</a></li>
-        <li><a href="products.html">Sản phẩm</a></li>
+        <li class="product">
+          Sản phẩm
+          <ul class="submenu hidden">
+            <li><a href="products.html?cat=ao">iPhone</a></li>
+            <li><a href="products.html?cat=quan">MacBook</a></li>
+            <li><a href="products.html?cat=giay">AppleWatch</a></li>
+          </ul>
+        </li>
         <li><a href="about.html">Giới thiệu</a></li>
-        <li><a href="profile.html">Cá nhân</a></li>
         <li><a href="cart.html">Giỏ hàng</a></li>
       </ul>
     </nav>
@@ -25,7 +31,35 @@
 
       <div class="cart-icon">
         <a href="cart.html"> 🛒 <span class="cart-count"></span> </a>
+        <ul class="submenu hidden">
+          <li><a href="products.html?cat=ao">Thông báo</a></li>
+          <li><a href="products.html?cat=quan">Cá nhân</a></li>
+          <li><a href="products.html?cat=giay">Giỏ hàng</a></li>
+        </ul>
       </div>
     </div>
   </div>
 </header>
+<script>
+  $(document).ready(function () {
+    // Khi click vào menu "Sản phẩm"
+    $('.main-nav .product').on('click', function (e) {
+      e.preventDefault();
+      $(this).children('.submenu').toggle(); // Ẩn/hiện
+    });
+
+    $('.cart-icon > a').on('click', function (e) {
+      e.preventDefault();
+      $('.cart-icon .submenu').toggle(); // hiện/ẩn
+    });
+    // Click ra ngoài thì đóng submenu
+    $(document).on('click', function (e) {
+      if (!$(e.target).closest('.main-nav .product').length) {
+        $('.main-nav .submenu').slideUp(200);
+      }
+      if (!$(e.target).closest('.cart-icon').length) {
+        $('.cart-icon .submenu').slideUp(200);
+      }
+    });
+  });
+</script>
