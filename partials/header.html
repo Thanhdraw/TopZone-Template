@@ -30,7 +30,8 @@
       </form>
 
       <div class="cart-icon">
-        <a href="cart.html"> 🛒 <span class="cart-count"></span> </a>
+        <span class="cart-trigger">🛒</span>
+        <span class="cart-count"></span>
         <ul class="submenu hidden">
           <li><a href="products.html?cat=ao">Thông báo</a></li>
           <li><a href="products.html?cat=quan">Cá nhân</a></li>
@@ -45,12 +46,12 @@
     // Khi click vào menu "Sản phẩm"
     $('.main-nav .product').on('click', function (e) {
       e.preventDefault();
-      $(this).children('.submenu').toggle(); // Ẩn/hiện
+      $(this).children('.submenu').toggle();
     });
 
-    $('.cart-icon > a').on('click', function (e) {
+    $('.cart-icon .cart-trigger').on('click', function (e) {
       e.preventDefault();
-      $('.cart-icon .submenu').toggle(); // hiện/ẩn
+      $(this).siblings('.submenu').slideToggle();
     });
     // Click ra ngoài thì đóng submenu
     $(document).on('click', function (e) {
