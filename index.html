@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="assets/css/header.css" />
     <!-- Footer css -->
     <link rel="stylesheet" href="assets/css/footer.css" />
+    <!-- Case-product -->
+    <link rel="stylesheet" href="assets/css/case-product.css" />
   </head>
   <body>
     <!-- Header sẽ được load vào đây -->
@@ -17,11 +19,7 @@
 
     <!-- Nội dung chính -->
     <main>
-      <div class="container">
-        <h1>Chào mừng đến MyShop</h1>
-        <p>Đây là nội dung trang chủ...</p>
-        <p>sdja;ojwdoqowj</p>
-      </div>
+      <div id="site-product-main"></div>
     </main>
 
     <!-- Footer -->
@@ -34,6 +32,7 @@
       $(function () {
         $('#site-header-main').load('partials/header.html');
         $('#site-footer-main').load('partials/footer.html');
+        $('#site-product-main').load('partials/case-product.html');
       });
     </script>
   </body>
